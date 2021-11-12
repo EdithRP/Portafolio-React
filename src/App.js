@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Formulario from './components/Formulario'
+// import Footer from './components/Footer'
+import Navbar from './components/Navbar.jsx'
+import Presentacion from './components/Presentation'
+import Imagenes from './components/Imagenes'
+import {Proyectos, Proyectositems} from './components/Proyectos'
+import {Testimonios} from './components/Testimonios'
+import {Servicios} from './components/Servicios'
+import {Areaimagen} from './components/Areaimagen';
+import Footer from './components/Footer';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <React.Fragment>
+        <Navbar/>
+        <Presentacion/>
+        <Proyectos/> 
+        <Imagenes/> 
+        
+        <Servicios/> 
+        <Testimonios/>
+        <Areaimagen/>
+        <Formulario />
+        <Footer/>
+        </React.Fragment>
+);
 }
 
 export default App;
